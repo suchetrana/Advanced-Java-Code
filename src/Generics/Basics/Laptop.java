@@ -1,6 +1,6 @@
-package Generics;
+package Generics.Basics;
 
-public class Laptop {
+ class Laptop {
     private int id;
     private String name;
     public Laptop(int id, String name) {

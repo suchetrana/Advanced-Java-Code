@@ -1,0 +1,9 @@
+1) Wrapper Class: Used to represent primitive data type as an object.
+2) Generic Method: Method that is defined with one or type parameters, similar to generic class.
+It can exist also non-generic class also.
+Syntax : <E> before return type
+Eg: public <E> void genericMethod(T data){
+        code
+}
+
+

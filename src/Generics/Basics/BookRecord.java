@@ -1,8 +1,8 @@
-package Generics;
+package Generics.Basics;
 
 import java.util.Objects;
 
-public class BookRecord {
+ class BookRecord {
     Book[] items;
     BookRecord() {
         this.items = new Book[10];

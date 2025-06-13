@@ -1,8 +1,8 @@
-package Generics;
+package Generics.Basics;
 
 import java.util.Objects;
 
-public class ObjectRecord {
+ class ObjectRecord {
     Object[] items;
     ObjectRecord() {
         this.items = new Object[10];

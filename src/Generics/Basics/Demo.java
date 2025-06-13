@@ -1,6 +1,6 @@
-package Generics;
+package Generics.Basics;
 
-public class Demo {
+class Demo {
     public static void main(String[] args) {
         Book book1 = new Book(1, "Java Basic");
         Book book2 = new Book(2, "Java Advanced");

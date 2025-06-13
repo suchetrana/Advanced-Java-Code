@@ -1,8 +1,8 @@
-package Generics;
+package Generics.Basics;
 
 import java.util.Objects;
 
-public class LaptopRecord{
+ class LaptopRecord{
     Laptop[] items;
     LaptopRecord() {
         this.items = new Laptop[10];
