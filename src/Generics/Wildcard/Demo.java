@@ -40,7 +40,7 @@ class Demo {
     private static void print3(List<? extends Number> list) {  // this  use to print child
         System.out.println(list);
     }
-    private static void print4(List<?> list) {
+    private static void print4(List<?> list) {  // Use to print everthing
         System.out.println(list);
     }
 }
