@@ -1,0 +1,75 @@
+What is Collection?
+Collection is an interface in the Collection Framework that represent a group of objects and element.
+It provides basic functionality that all collections share, such as adding, removing, and iterating over elements.
+Eg: List(save in order), Set, Queue
+
+
+What is Collections?
+Collections is a utility class in Java's standard library provides set of static methods for working with collections.
+Provides methods for performing operations on collections, such as sorting, searching, and shuffling.
+Eg: Collections.sort() can be used to sort a list.
+
+
+
+                             ---------------------
+                             |  Collection<E>    |   <-- Interface
+                             ---------------------
+                                  /     |     \
+                                 /      |      \
+                                /       |       \
+       -------------------  -----------------  ----------------
+       |     List<E>     |  |    Queue<E>   |  |    Set<E>     |   <-- Interfaces
+       -------------------  -----------------  ----------------
+            /     \                |                  /      \
+           /       \               |                 /        \
+  ----------------  -------------------     ----------------     -------------------
+  | ArrayList<E> |  |  LinkedList<E>  |     |   HashSet<E>  |     |  SortedSet<E>   |  <-- Classes/Interface
+  ----------------  -------------------     ----------------     -------------------
+                             |                                      |
+                             |                               ---------------------
+                             |                               |  NavigableSet<E>  |   <-- Interface
+                             |                               ---------------------
+                                                        |
+                                                  ----------------
+                                                  |  TreeSet<E>  |   <-- Class
+                                                  ----------------
+
+                       Additional Class:
+                          ----------------------
+                          |  LinkedHashSet<E>  |  <-- Subclass of HashSet
+                          ----------------------
+
+                       Additional Interface:
+                          -------------------
+                          |    Deque<E>      |   <-- Interface
+                          -------------------
+                              /        \
+                             /          \
+               ----------------     -------------------
+               | ArrayDeque<E> |     | LinkedList<E>  |   <-- Classes
+               ----------------     -------------------
+
+-------------------------------------------------------------
+
+                             ------------------
+                             |   Map<K,V>     |   <-- Interface
+                             ------------------
+                                  /     \
+                                 /       \
+                                /         \
+          ----------------------       ----------------------
+          |  HashMap<K,V>     |       |  SortedMap<K,V>    |   <-- Classes/Interface
+          ----------------------       ----------------------
+                  |                            |
+        ------------------------     -------------------------
+        | LinkedHashMap<K,V>  |     | NavigableMap<K,V>     |   <-- Classes/Interface
+        ------------------------     -------------------------
+                                               |
+                                         ------------------
+                                         |  TreeMap<K,V>  |   <-- Class
+                                         ------------------
+
+Legend:
+ - Interfaces: Represented using `| InterfaceName |`
+ - Classes: Represented using `| ClassName |`
+ - Arrows/lines: Represent hierarchy (inheritance or implementation)
