@@ -1,0 +1,16 @@
+# What is Comparable?
+
+Comparable is an interface that is used to define a natural ordering of objects.
+When a class implements the Comparable interface, it means that instances of that class can be sorted in a natural way.
+
+The natural ordering is defined by the `compareTo()` method, which is used to compare the current object with another object of the same class.
+
+The `compareTo()` method returns a negative integer, zero, or a positive integer depending on whether the current object is less than, equal to, or greater than the other object.
+
+# What is Comparator?
+
+Comparator is an interface that is used to define a custom ordering of objects. When a class implements the Comparator interface, it means that instances of that class can be sorted in a custom way.
+
+The custom ordering is defined by the `compare()` method, which is used to compare two objects of the same class.
+
+The `compare()` method returns a negative integer, zero, or a positive integer depending on whether the first object is less than, equal to, or greater than the second object.
