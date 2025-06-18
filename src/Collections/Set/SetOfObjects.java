@@ -9,9 +9,13 @@ class SetOfObjects {
         Set<Employee> set = new TreeSet<>();
         set.add(new Employee(10, "Billy"));
         set.add(new Employee(20, "Dua"));
-        set.add(new Employee(10, "Weekend"));
+        set.add(new Employee(30, "Weekend"));
         System.out.println("--Default--");
         System.out.println("Contents of set are: " + set);
+        System.out.println("Sort acc to Name: ");
+        Set<Employee> set2 = new TreeSet<>(new CustomEmployeeComparator());
+        set2.addAll(set);
+        System.out.println("Contents of set are: " + set2);
 
     }
 }
