@@ -1,0 +1,13 @@
+What is Multithreading?
+
+Multithreading in Java refers to the ability of a Java program
+to execute multiple threads concurrently, allowing it to perform
+multiple tasks concurrently in parallel.
+
+What is a Thread?
+
+A thread is a lightweight process that has its own execution
+path and shares the same memory space as the parent
+process, allowing for efficient communication and
+synchronization between threads.
+
