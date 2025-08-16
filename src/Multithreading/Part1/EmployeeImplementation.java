@@ -1,19 +1,19 @@
-package Multithreading;
+package Multithreading.Part1;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeImplementation2 implements EmployeeRepository {
+public class EmployeeImplementation implements EmployeeRepository {
     private static List<Employee> employeeList = new ArrayList<>();
     static {
-        employeeList.add(new Employee(201, "Abhishek"));
-        employeeList.add(new Employee(202, "Sneh"));
-        employeeList.add(new Employee (203, "Lakshay"));
-        employeeList.add(new Employee (204, "Aditi"));
-        employeeList.add(new Employee (205, "Raman"));
+        employeeList.add(new Employee(101, "Abhishek"));
+        employeeList.add(new Employee(102, "Sneh"));
+        employeeList.add(new Employee (103, "Lakshay"));
+        employeeList.add(new Employee (104, "Aditi"));
+        employeeList.add(new Employee (105, "Raman"));
 }
     @Override
-    public void displayEmployees(){
+    public void displayEmployees() {
         for (Employee employee : employeeList) {
             System.out.println(employee);
         }

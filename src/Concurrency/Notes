@@ -1,0 +1,8 @@
+1) If Thread is dead we cannot restart it.
+2) You have to create new Thread.
+
+In Java a Thread object can be started only once.
+Once the run() method has finished, the thread enters the terminated state and the JVM will throw an IllegalThreadStateException if you try to start it again.
+To run the same task a second time you must create a new Thread (or a new task in a thread‑pool).
+
+

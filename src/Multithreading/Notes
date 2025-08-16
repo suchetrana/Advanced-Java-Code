@@ -11,3 +11,126 @@ path and shares the same memory space as the parent
 process, allowing for efficient communication and
 synchronization between threads.
 
+In Java, threads are categorized into 2 types:
+1) user threads
+2) daemon threads
+
+User threads are high-priority threads designed to execute the main tasks of an application.
+that all thread we create are user thread.
+
+Daemon threads are low-priority threads that run in the background to provide services to user threads
+we create daemon thread ->  thread.setDaemon(true); before calling thread.start();
+
++----------------+-------------------------------------------+----------------------------------------------+
+|    Feature     |                User Thread                |                Daemon Thread                 |
++----------------+-------------------------------------------+----------------------------------------------+
+| JVM Shutdown   | Prevents JVM from exiting.                | Does not prevent JVM from exiting.           |
++----------------+-------------------------------------------+----------------------------------------------+
+| Default        | Yes, all threads are user by default.     | No, must be set explicitly.                  |
++----------------+-------------------------------------------+----------------------------------------------+
+| Purpose        | Core tasks of an application.             | Background, supporting tasks.                |
++----------------+-------------------------------------------+----------------------------------------------+
+| Termination    | Completes its execution normally.         | Terminated abruptly when the app exits.      |
++----------------+-------------------------------------------+----------------------------------------------+
+| Example        | The main thread.                          | The garbage collector thread.                |
++----------------+-------------------------------------------+----------------------------------------------+
+
+
+
+In JAVA we Achieve Multithreading :
+
+1: Using Thread class
+
+Code Example:
+
+public class Demo extends Thread {
+        public static void main(String[] args) {
+        Thread thread = new Demo();
+        thread.start();
+    }
+    @Override
+    public void run() {
+// business logic
+    }
+}
+
+Problem : we can not extend class more than one.
+
+Solution is 2 Method
+
+2: Using Runnable interface
+
+In runnable there is no start() method so we take help from Thread class.
+
+Code Example:
+
+public class Demo implements Runnable {
+        public static void main(String[] args) {
+            Runnable runnable = new Demo();
+            Thread thread = new Thread(runnable);
+            thread.start();
+        }
+        @Override
+        public void run() {
+        // business logic
+        }
+}
+
+Runnable is parent of Thread class.
+
+Which should use??
+    Depend on usage
+    Performance is same.
+
+    If extends more than 1 class use Runnable
+    If only one class use Thread
+
+
+Life Cycle of Thread
+
+1) Thread goes to Newborn state when "new" keyword is used
+
+Thread th = new Thread();
+
+2) Thread goes to Runnable state when start() method is invoked.
+3) Thread goes to Running state when executed by processor.
+4) Thread goes to Running state when its processor time end.
+
+5) Thread goes to Waiting state when wait() method is invoked and
+comes back to Runnable when notify() is invoked
+
+6) Thread goes to Dead state when Operations are completed.
+
+
++-----+      start()     +-------------+
+| NEW | ───────────────► |   RUNNABLE  |
++-----+                  +-------------+
+        ▲                 ^     |      ^
+        |                 |     |      |
+        |                 |     |      |
+        |  enter sync     |     |      |
+        |  (lock busy)    |     |      |
+        |                 |     |      |
+        |                 |     |      |
+        |                 |     |      |
+        ▼                 |     |      |
+     +--------+   wait()/join()/sleep()
+     | BLOCKED| ◄──────────────────────┘
+     +--------+           |
+                     +-----------+
+                     |  WAITING  | ◄──────┐
+                     +-----------+       |
+                    (notify/timeout)      |
+                                        │
+                     +---------------------+
+                     | TIMED_WAITING        │
+                     +---------------------+
+
+
+
+In JAVA there is only theoretical concept of priority
+Because when thread executing in processor there is not any priority this only machine dependent
+
+
+
+
