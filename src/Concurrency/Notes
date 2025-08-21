@@ -5,4 +5,16 @@ In Java a Thread object can be started only once.
 Once the run() method has finished, the thread enters the terminated state and the JVM will throw an IllegalThreadStateException if you try to start it again.
 To run the same task a second time you must create a new Thread (or a new task in a thread‑pool).
 
+What is Concurrency?
+Concurrency in Java refers to the ability of a Java program to
+manage and execute multiple tasks concurrently, where tasks
+can be executed simultaneously or overlapping in time.
+Concurrency allows a Java program to efficiently utilize
+system resources and improve the overall performance and
+responsiveness of the program.
 
+1) Avoid using Thread subclass for work – it couples task to thread lifecycle and defeats the benefits of thread pools.
+2) Prefer Runnable/Callable + ExecutorService – clean separation, easier testability,
+better resource management (pooling, shutdown, timeouts, exception handling).
+4) Keep Thread for low‑level use cases only (rare in modern Java) and when you really control the thread pool yourself
+ (e.g., custom scheduler, real‑time constraints).
