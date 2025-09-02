@@ -1,6 +1,6 @@
 package lambda.expression.demo5;
 
-public class Task1 {
+class Task1 {
     public static void main(String[] args) {
 
         Operation operation = new OperationImpl();

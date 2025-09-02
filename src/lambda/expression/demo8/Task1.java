@@ -1,7 +1,9 @@
 package lambda.expression.demo8;
 
-public class Task1 {
-    public static void main(String[] args) {
+import java.io.IOException;
+
+class Task1 {
+    public static void main(String[] args) throws IOException {
 
         Operation operation = new OperationImpl();
         System.out.println(operation.divide(2,0));
