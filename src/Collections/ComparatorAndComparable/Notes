@@ -14,3 +14,17 @@ Comparator is an interface that is used to define a custom ordering of objects. 
 The custom ordering is defined by the `compare()` method, which is used to compare two objects of the same class.
 
 The `compare()` method returns a negative integer, zero, or a positive integer depending on whether the first object is less than, equal to, or greater than the second object.
+
+
+This method compares two objects, o1 and o2, and returns:
+
+-1 (or any negative number): if o1 should come before o2
+0: if o1 and o2 are equal in sorting order
+1 (or any positive number): if o1 should come after o2
+
+
+ Easy Way to Remember:
+
+Negative (-1) → First comes before second
+Zero (0) → Both are equal
+Positive (1) → First comes after second
