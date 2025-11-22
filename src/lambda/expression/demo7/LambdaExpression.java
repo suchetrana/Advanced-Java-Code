@@ -5,6 +5,6 @@ public class LambdaExpression {
         Operation operation = (language, version) ->
                 System.out.println("Language: "+ language + " version: " + version);
 
-        operation.print("java", 21);
+        operation.print("java", 25);
     }
 }
